@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CoolWanAndroid</string>
+    <string name="activity_main_home">Home</string>
+    <string name="activity_main_know">Know</string>
+    <string name="activity_main_guide">Guide</string>
+    <string name="activity_main_project">Project</string>
+</resources>

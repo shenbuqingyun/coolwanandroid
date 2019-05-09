@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="morandi_purple">#CDABD0</color>
+    <color name="morandi_red">#E58AB3</color>
+    <color name="morandi_orange">#F0C4B9</color>
+    <color name="morandi_skin">#E9D1A3</color>
+    <color name="morandi_yellow">#ECD793</color>
+    <color name="morandi_olivine">#AED6B1</color>
+    <color name="morandi_green">#80C8BA </color>
+    <color name="morandi_blue">#7EC5D9 </color>
+    <color name="morandi_cyan_blue">#88A0CA</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="trans">#00000000</color>
+    <color name="trans_90">#E6FFFFFF</color>
+    <color name="trans_80">#CCFFFFFF</color>
+    <color name="trans_70">#B3FFFFFF</color>
+    <color name="trans_60">#99FFFFFF</color>
+    <color name="trans_50">#80FFFFFF</color>
+    <color name="trans_45">#73FFFFFF</color>
+    <color name="trans_40">#66FFFFFF</color>
+    <color name="trans_30">#4DFFFFFF</color>
+    <color name="trans_20">#33FFFFFF</color>
+    <color name="trans_10">#1AFFFFFF</color>
+</resources>
