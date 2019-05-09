@@ -10,7 +10,7 @@ import com.cool.wan.android.utils.fonts.TypefaceHelper;
  * 作者    cpf
  * 时间    2019/5/9
  * 文件    coolwanandroid
- * 描述
+ * 描述    初始化字体
  */
 public class CoolAndroidApplication extends Application {
 
