@@ -20,3 +20,4 @@
         implementation 'com.github.bumptech.glide:glide:4.8.0' // 加载图片<br>
         implementation 'com.jakewharton:butterknife:8.4.0' // 注入框架<br>
         annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'<br>
+! [wrong] (https://github.com/shenbuqingyun/coolwanandroid/blob/master/Screenshot_2019-05-09-18-23-49-430_com.cool.wan.a.png)
