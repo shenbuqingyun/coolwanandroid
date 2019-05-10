@@ -2,7 +2,9 @@
 -------
 实现方式：非RxJava实现，用MVC+OKGO实现，主要用于测试网络数据请求展示刷新和一些第三方库的练习。
 -------
-涉及的第三方库：感谢开源<br>
+#### 效果如下：<br><br>
+![img](https://github.com/shenbuqingyun/coolwanandroid/blob/master/GIF.gif)<br>  
+#### 涉及的第三方库：感谢开源<br>
     // ui<br>
         implementation 'com.youth.banner:banner:1.4.10' // 首页横幅<br>
         implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1' // 下拉刷新 上拉加载<br>
@@ -20,4 +22,4 @@
         implementation 'com.github.bumptech.glide:glide:4.8.0' // 加载图片<br>
         implementation 'com.jakewharton:butterknife:8.4.0' // 注入框架<br>
         annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'<br>
-![img](https://github.com/shenbuqingyun/coolwanandroid/blob/master/Screenshot.jpg)  
+
