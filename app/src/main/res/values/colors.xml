@@ -27,4 +27,7 @@
     <color name="trans_30">#4DFFFFFF</color>
     <color name="trans_20">#33FFFFFF</color>
     <color name="trans_10">#1AFFFFFF</color>
+
+    <color name="srlprimarycolor">#33ff4444</color>
+    <color name="text_Grey">#ff4444</color>
 </resources>

@@ -16,7 +16,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="5dp"
+        android:background="@drawable/linerlayout_water_selector"
+        android:clickable="true"
+        android:focusable="true">
 
         <TextView
             android:id="@+id/tv_item_title"
