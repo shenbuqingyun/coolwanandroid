@@ -2,15 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:background="@color/trans">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textColor="#fff"
-        android:textSize="12sp"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclervie_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/trans"
+        android:layout_weight="1" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclervie_right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/trans"
+        android:layout_weight="3.5" />
+
 </LinearLayout>
