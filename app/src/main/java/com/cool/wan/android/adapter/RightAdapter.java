@@ -1,14 +1,20 @@
 package com.cool.wan.android.adapter;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.cool.wan.android.R;
+import com.cool.wan.android.activity.TagDetailActivity;
+import com.cool.wan.android.activity.WebViewActivity;
 import com.cool.wan.android.bean.GuideBean;
 import com.zhy.view.flowlayout.FlowLayout;
 import com.zhy.view.flowlayout.TagAdapter;
@@ -24,12 +30,11 @@ public class RightAdapter extends BaseQuickAdapter<GuideBean.DataBean, BaseViewH
 
     @Override
     protected void convert(BaseViewHolder holder, GuideBean.DataBean item) {
-        holder.getView(R.id.tv_item_tixi).setVisibility(View.INVISIBLE);
+        holder.getView(R.id.tv_item_tixi).setVisibility(View.GONE); // 右侧列表不为item设立标题
         TagFlowLayout tfl = holder.getView(R.id.tfl);
         ArrayList<String> mVals = new ArrayList<>();
         for (int i = 0; i < item.getArticles().size(); i++) {
             mVals.add(item.getArticles().get(i).getTitle());
-            Log.i(TAG, "convert: " + item.getArticles().get(i).getChapterName());
         }
         tfl.setAdapter(new TagAdapter<String>(mVals) {
             @Override
@@ -43,6 +48,14 @@ public class RightAdapter extends BaseQuickAdapter<GuideBean.DataBean, BaseViewH
                 tv.setText(s);
                 return tv;
             }
+        });
+
+        tfl.setOnTagClickListener((view, position, parent) -> {
+            Intent intent = new Intent(mContext, WebViewActivity.class);
+            intent.putExtra("link", item.getArticles().get(position).getLink());
+            mContext.startActivity(intent);
+            Log.d(TAG, "getView: " + item.getArticles().get(position).getLink() + "," + position);
+            return false;
         });
     }
 }

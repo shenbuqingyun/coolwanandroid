@@ -3,20 +3,21 @@ package com.cool.wan.android.bean;
 import java.util.List;
 
 /**
- * 作者    cpf
- * 时间    2019/5/13
- * 文件    coolwanandroid
- * "http://www.wanandroid.com/navi/json"
- * DataBean 相当于班级
- * ArticleBean 相当于班级的学生 它的link就是跳转所需要的url
- *
- * DataBean的cid和ArticlesBean的chapterId就是两者关联的地方
+ * https://www.wanandroid.com/project/list/1/json?cid=1
  */
-public class GuideBean {
+public class ProjectListBean {
 
+    private DataBean data;
     private int errorCode;
     private String errorMsg;
-    private List<DataBean> data;
+
+    public DataBean getData() {
+        return data;
+    }
+
+    public void setData(DataBean data) {
+        this.data = data;
+    }
 
     public int getErrorCode() {
         return errorCode;
@@ -34,86 +35,96 @@ public class GuideBean {
         this.errorMsg = errorMsg;
     }
 
-    public List<DataBean> getData() {
-        return data;
-    }
-
-    public void setData(List<DataBean> data) {
-        this.data = data;
-    }
-
-    @Override
-    public String toString() {
-        return "NavigationBean{" +
-                "errorCode=" + errorCode +
-                ", errorMsg='" + errorMsg + '\'' +
-                ", data=" + data +
-                '}';
-    }
-
     public static class DataBean {
 
-        private int cid;
-        private String name;
-        private List<ArticlesBean> articles;
+        private int curPage;
+        private int offset;
+        private boolean over;
+        private int pageCount;
+        private int size;
+        private int total;
+        private List<DatasBean> datas;
 
-        public int getCid() {
-            return cid;
+        public int getCurPage() {
+            return curPage;
         }
 
-        public void setCid(int cid) {
-            this.cid = cid;
+        public void setCurPage(int curPage) {
+            this.curPage = curPage;
         }
 
-        public String getName() {
-            return name;
+        public int getOffset() {
+            return offset;
         }
 
-        public void setName(String name) {
-            this.name = name;
+        public void setOffset(int offset) {
+            this.offset = offset;
         }
 
-        public List<ArticlesBean> getArticles() {
-            return articles;
+        public boolean isOver() {
+            return over;
         }
 
-        public void setArticles(List<ArticlesBean> articles) {
-            this.articles = articles;
+        public void setOver(boolean over) {
+            this.over = over;
         }
 
-        @Override
-        public String toString() {
-            return "DataBean{" +
-                    "cid=" + cid +
-                    ", name='" + name + '\'' +
-                    ", articles=" + articles +
-                    '}';
+        public int getPageCount() {
+            return pageCount;
         }
 
-        public static class ArticlesBean {
+        public void setPageCount(int pageCount) {
+            this.pageCount = pageCount;
+        }
+
+        public int getSize() {
+            return size;
+        }
+
+        public void setSize(int size) {
+            this.size = size;
+        }
+
+        public int getTotal() {
+            return total;
+        }
+
+        public void setTotal(int total) {
+            this.total = total;
+        }
+
+        public List<DatasBean> getDatas() {
+            return datas;
+        }
+
+        public void setDatas(List<DatasBean> datas) {
+            this.datas = datas;
+        }
+
+        public static class DatasBean {
             /**
              * apkLink :
-             * author : 小编
-             * chapterId : 272
-             * chapterName : 常用网站
+             * author : hurshi
+             * chapterId : 294
+             * chapterName : 完整项目
              * collect : false
              * courseId : 13
-             * desc :
-             * envelopePic :
-             * fresh : false
-             * id : 1848
-             * link : https://developers.google.cn/
-             * niceDate : 2018-01-07
+             * desc : iOS也有WanAndroid客户端啦
+             * envelopePic : http://wanandroid.com/blogimgs/57d702c3-9a24-4f69-8c1b-967fd45398e5.png
+             * fresh : true
+             * id : 7420
+             * link : http://www.wanandroid.com/blog/show/2408
+             * niceDate : 1天前
              * origin :
-             * projectLink :
-             * publishTime : 1515322795000
-             * superChapterId : 0
-             * superChapterName :
-             * tags : []
-             * title : Google开发者
+             * projectLink : https://github.com/hurshi/wanandroid
+             * publishTime : 1540721824000
+             * superChapterId : 294
+             * superChapterName : 开源项目主Tab
+             * tags : [{"name":"项目","url":"/project/list/1?cid=294"}]
+             * title : 一款使用Flutter编写的，Material Design风格的WanAndroid客户端
              * type : 0
              * userId : -1
-             * visible : 0
+             * visible : 1
              * zan : 0
              */
 
@@ -139,7 +150,7 @@ public class GuideBean {
             private int userId;
             private int visible;
             private int zan;
-            private List<?> tags;
+            private List<TagsBean> tags;
 
             public String getApkLink() {
                 return apkLink;
@@ -317,41 +328,38 @@ public class GuideBean {
                 this.zan = zan;
             }
 
-            public List<?> getTags() {
+            public List<TagsBean> getTags() {
                 return tags;
             }
 
-            public void setTags(List<?> tags) {
+            public void setTags(List<TagsBean> tags) {
                 this.tags = tags;
             }
 
-            @Override
-            public String toString() {
-                return "ArticlesBean{" +
-                        "apkLink='" + apkLink + '\'' +
-                        ", author='" + author + '\'' +
-                        ", chapterId=" + chapterId +
-                        ", chapterName='" + chapterName + '\'' +
-                        ", collect=" + collect +
-                        ", courseId=" + courseId +
-                        ", desc='" + desc + '\'' +
-                        ", envelopePic='" + envelopePic + '\'' +
-                        ", fresh=" + fresh +
-                        ", id=" + id +
-                        ", link='" + link + '\'' +
-                        ", niceDate='" + niceDate + '\'' +
-                        ", origin='" + origin + '\'' +
-                        ", projectLink='" + projectLink + '\'' +
-                        ", publishTime=" + publishTime +
-                        ", superChapterId=" + superChapterId +
-                        ", superChapterName='" + superChapterName + '\'' +
-                        ", title='" + title + '\'' +
-                        ", type=" + type +
-                        ", userId=" + userId +
-                        ", visible=" + visible +
-                        ", zan=" + zan +
-                        ", tags=" + tags +
-                        '}';
+            public static class TagsBean {
+                /**
+                 * name : 项目
+                 * url : /project/list/1?cid=294
+                 */
+
+                private String name;
+                private String url;
+
+                public String getName() {
+                    return name;
+                }
+
+                public void setName(String name) {
+                    this.name = name;
+                }
+
+                public String getUrl() {
+                    return url;
+                }
+
+                public void setUrl(String url) {
+                    this.url = url;
+                }
             }
         }
     }

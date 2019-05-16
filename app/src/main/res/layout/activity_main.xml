@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--网页背景动画特效-->
+    <!--网页背景动画特效 holo_red_light -->
     <me.ibrahimsn.particle.ParticleView
         android:id="@+id/particleView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:backgroundColor="@android:color/holo_red_light"
+        app:backgroundColor="@color/morandi_cyan_blue"
         app:maxParticleRadius="12"
         app:minParticleRadius="5"
         app:particleColor="@android:color/white"
@@ -31,7 +31,7 @@
             android:id="@+id/bottom_navigation_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:bnbActiveColor="#ffff4444"
+            app:bnbActiveColor="@color/morandi_cyan_blue"
             android:layout_alignParentBottom="true"
             app:bnbBackgroundStyle="background_style_static" />
     </RelativeLayout>
