@@ -22,4 +22,5 @@
         implementation 'com.github.bumptech.glide:glide:4.8.0' // 加载图片<br>
         implementation 'com.jakewharton:butterknife:8.4.0' // 注入框架<br>
         annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'<br>
-
+#### 最新APK安装<br><br>
+![img](https://github.com/shenbuqingyun/coolwanandroid/blob/master/cool.png)<br>  
