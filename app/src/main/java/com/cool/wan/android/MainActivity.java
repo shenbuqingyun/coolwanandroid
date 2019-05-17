@@ -24,6 +24,10 @@ import me.ibrahimsn.particle.ParticleView;
 
 import static com.cool.wan.android.utils.fonts.TypefaceHelper.typeface;
 
+/**
+ * 功能包括：首页 知识 导航 项目
+ * 待补充：登录 收藏 我的
+ */
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.particleView)
